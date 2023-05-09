@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon >menu</mat-icon>
+    </button>
+    <span>{{title}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container >
+  <mat-sidenav mode="over" #sidenav>
+    <mat-nav-list (click)="sidenav.close();">
+      <a mat-list-item routerLink="/home">Accueil</a>
+      <a mat-list-item routerLink="/checklist">Ma check-list</a>
+      <a mat-list-item routerLink="/external-resources">Ressources externes</a>
+      <a mat-list-item routerLink="/play">Jouer au Quiz</a>
+      <a mat-list-item routerLink="/highscores">Meilleurs scores</a>
+      <a mat-list-item routerLink="/feedback">Donnez votre avis</a>
+      <a mat-list-item routerLink="/about">A propos</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
