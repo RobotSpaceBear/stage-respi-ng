@@ -7,16 +7,69 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-sidenav-container >
+<mat-sidenav-container>
   <mat-sidenav mode="over" #sidenav>
+
     <mat-nav-list (click)="sidenav.close();">
-      <a mat-list-item routerLink="/home">Accueil</a>
+      <mat-list>
+        <mat-list-item>
+          <a mat-list-item routerLink="/home">
+            <mat-icon matListItemIcon>home</mat-icon>
+            <span matLine>Accueil</span>
+          </a>
+        </mat-list-item>
+
+        <mat-list-item>
+          <a mat-list-item routerLink="/check-list">
+            <mat-icon matListItemIcon>check_box</mat-icon>
+            <span matLine>Ma Check-list</span>
+          </a>
+        </mat-list-item>
+
+        <mat-list-item>
+          <a mat-list-item routerLink="/external-resources">
+            <mat-icon matListItemIcon>school</mat-icon>
+            <span matLine>Ressources externes</span>
+          </a>
+        </mat-list-item>
+
+        <mat-list-item>
+          <a mat-list-item routerLink="/pleay">
+            <mat-icon matListItemIcon>videogame_asset</mat-icon>
+            <span matLine>Jouer au quizz</span>
+          </a>
+        </mat-list-item>
+
+        <mat-list-item>
+          <a mat-list-item routerLink="/highscores">
+            <mat-icon matListItemIcon>trending_up</mat-icon>
+            <span matLine>Meilleurs scores</span>
+          </a>
+        </mat-list-item>
+
+        <mat-list-item>
+          <a mat-list-item routerLink="/feedback">
+            <mat-icon matListItemIcon>thumb_up_alt</mat-icon>
+            <span matLine>Donnez votre avis</span>
+          </a>
+        </mat-list-item>
+
+        <mat-list-item>
+          <a mat-list-item routerLink="/about">
+            <mat-icon matListItemIcon>info</mat-icon>
+            <span matLine>A propos</span>
+          </a>
+        </mat-list-item>
+
+    </mat-list>
+
+      <!-- <a mat-list-item routerLink="/home">Accueil</a>
       <a mat-list-item routerLink="/checklist">Ma check-list</a>
       <a mat-list-item routerLink="/external-resources">Ressources externes</a>
       <a mat-list-item routerLink="/play">Jouer au Quiz</a>
       <a mat-list-item routerLink="/highscores">Meilleurs scores</a>
       <a mat-list-item routerLink="/feedback">Donnez votre avis</a>
-      <a mat-list-item routerLink="/about">A propos</a>
+      <a mat-list-item routerLink="/about">A propos</a> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
